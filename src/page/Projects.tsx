@@ -2,6 +2,7 @@ import { useState } from 'react';
 import SwordIcon from '../assets/images/Sword.png';
 import Card from '../components/general-view/ui/Card';
 import type { IProject } from '../models/interfaces/IObjects';
+import BatIcon from '../assets/images/BatIcon.png';
 
 export default function Projects() {
 
@@ -26,7 +27,8 @@ export default function Projects() {
                     ))
                 ) : (
                     <div className="col-span-full text-center">
-                        <p className="text-sm text-zinc-300">Ningun proyecto disponible.</p>
+                        <img src={BatIcon} className="mx-auto mb-2 size-12" />
+                        <p className="text-xl text-zinc-300 dmc-font">Ningun proyecto disponible.</p>
                     </div>
                 )}
             </div>
