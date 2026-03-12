@@ -4,6 +4,7 @@ import Card from '../components/general-view/ui/Card';
 import type { IProject } from '../models/interfaces/IObjects';
 import BatIcon from '../assets/images/BatIcon.png';
 import SearchBar from '../components/general-view/ui/SearchBar';
+import ProjectSection from '../components/sections/ProjectSection';
 
 
 export default function Projects() {
@@ -20,22 +21,7 @@ export default function Projects() {
                 <div className="h-1 w-36 bg-red-600 mx-auto rounded-full mb-4"></div>
             </div>
             <SearchBar />
-
-            <div className="grid gap-6 md:grid-cols-3">
-                {projects.length > 0 ? (
-                    projects.map((project) => (
-                        <Card key={project.id}>
-                            <h3 className="text-xl font-semibold mb-2 dmc-font">{project.title}</h3>
-                            <p className="text-sm text-zinc-300">{project.description}</p>
-                        </Card>
-                    ))
-                ) : (
-                    <div className="col-span-full text-center">
-                        <img src={BatIcon} className="mx-auto mb-2 size-12" />
-                        <p className="text-xl text-zinc-300 dmc-font">Ningun proyecto disponible.</p>
-                    </div>
-                )}
-            </div>
+            <ProjectSection />
         </main>
 
     )
